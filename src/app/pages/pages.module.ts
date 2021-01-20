@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+// Mis Modulos
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from '../app-routing.module';
+import { SharedModule } from '../shared/shared.module';
+
+// Mis Componentes
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesNotFoundComponent } from './404/pages-not-found.component';
-import { RouterModule } from '@angular/router';
-import { AppRoutingModule } from '../app-routing.module';
+import { MaterialUiModule } from '../material-ui.module';
 
 @NgModule({
   declarations: [
@@ -16,10 +22,13 @@ import { AppRoutingModule } from '../app-routing.module';
     CommonModule,
     RouterModule,
     AppRoutingModule,
+    SharedModule,
+    MaterialUiModule
   ],
   exports: [
     PagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    PagesNotFoundComponent
   ]
 })
 export class PagesModule { }

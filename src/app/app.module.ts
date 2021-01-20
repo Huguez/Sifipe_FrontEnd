@@ -3,17 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { PagesModule } from './pages/pages.module';
 import { RouterModule } from '@angular/router';
+import { PagesModule } from './pages/pages.module';
+import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialUiModule } from './material-ui.module';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     PagesModule,
-    RouterModule
+    RouterModule,
+    SharedModule,
+    MaterialUiModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
