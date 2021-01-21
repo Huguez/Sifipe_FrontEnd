@@ -3,13 +3,19 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-pages',
   templateUrl: './pages.component.html',
-  styleUrls: []
+  styleUrls: ['pages.component.css']
 })
 export class PagesComponent implements OnInit {
-
+  
+  public abrirMenu: boolean = false;
+  
   constructor() { }
 
   ngOnInit(): void {
+  }
+  
+  revisarMenu( event ){
+    this.abrirMenu = event;
   }
 
 }
