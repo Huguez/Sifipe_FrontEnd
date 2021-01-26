@@ -7,9 +7,6 @@ import { RouterModule } from '@angular/router';
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialUiModule } from './material-ui.module';
-
-
 
 @NgModule({
   declarations: [
@@ -20,7 +17,6 @@ import { MaterialUiModule } from './material-ui.module';
     PagesModule,
     RouterModule,
     SharedModule,
-    MaterialUiModule,
     BrowserAnimationsModule
   ],
   providers: [],
