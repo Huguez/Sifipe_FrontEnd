@@ -10,20 +10,20 @@ import { SharedModule } from '../shared/shared.module';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesNotFoundComponent } from './404/pages-not-found.component';
-import { MaterialUiModule } from '../material-ui.module';
+import { IngresoComponent } from './ingreso/ingreso.component';
 
 @NgModule({
   declarations: [
     PagesComponent,
     DashboardComponent,
-    PagesNotFoundComponent
+    PagesNotFoundComponent,
+    IngresoComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     AppRoutingModule,
     SharedModule,
-    MaterialUiModule
   ],
   exports: [
     PagesComponent,
