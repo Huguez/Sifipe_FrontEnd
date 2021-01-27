@@ -1,0 +1,126 @@
+<div class="container">
+
+    <div class="row text-center m-2">
+        <div class="col-auto me-auto">
+            <button type="button" class="btn btn-secondary">Ingreso Extraordinario</button>
+        </div>
+        <div class="col-auto">
+            <button type="button" class="btn btn-success">Nuevo Ingreso</button>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+
+            <app-grafica tipo="pie" ></app-grafica>
+            
+        </div>
+
+        <div class="col">
+            
+            <h4 class="mt-3">Fuentes de Ingresos</h4>
+
+            <ul class=" list-group-flush">
+
+                <li class="list-group-item d-flex justify-content-between align-items-center" >
+                    <p>
+                        Fuente de ingreso main 
+                            
+                        <span class="badge bg-success rounded-pill">
+                            <i class="bi bi-arrow-up"></i>
+                        </span>
+                        
+                        <span class="badge bg-warning rounded-pill">
+                            <i class="bi bi-arrow-down"></i>
+                        </span>
+                        
+                        <span class="badge bg-secondary rounded-pill">
+                            =
+                        </span>
+                    </p>
+                    
+                    <div class="float-end" >{{ dinero | currency:'MXN' }}</div>
+                </li>
+                
+                <li class=" list-group-item d-flex justify-content-between align-items-center">
+                    <p>
+                        Fuente de ingreso mayor
+
+                        <span class="badge bg-success rounded-pill">
+                            <i class="bi bi-arrow-up"></i>
+                        </span>
+                        
+                        <span class="badge bg-warning rounded-pill">
+                            <i class="bi bi-arrow-down"></i>
+                        </span>
+                        
+                        <span class="badge bg-secondary rounded-pill">
+                            =
+                        </span>
+                        
+                    </p>
+                    <div class="float-end">{{ dinero | currency:'USD':'symbol'  }}</div>
+                </li>
+                
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <p>
+                        Fuente de ingreso 3
+
+                        <span class="badge bg-success rounded-pill">
+                            <i class="bi bi-arrow-up"></i>
+                        </span>
+                        
+                        <span class="badge bg-warning rounded-pill">
+                            <i class="bi bi-arrow-down"></i>
+                        </span>
+                        
+                        <span class="badge bg-secondary rounded-pill">
+                            =
+                        </span>    
+                    </p>
+                    <div class="float-end">{{ dinero | currency:'MXN':'code' }}</div>
+                </li>
+            
+
+            </ul>
+        </div>
+        
+    </div>
+    
+    <div class="row mt-4">
+        
+        <div class="col">
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Periodo</th>
+                        <th scope="col"> I1 </th>
+                        <th scope="col"> I2 </th>
+                        <th scope="col"> I3 </th>
+                        <th scope="col"> Total </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>enero-2020</td>
+                        <td>{{ dinero | currency:'MXN' }}</td>
+                        <td>{{ dinero | currency:'MXN' }}</td>
+                        <td>{{ dinero | currency:'MXN' }}</td>
+                        <td>{{ dinero | currency:'MXN' }}</td>
+                    </tr>
+                    <tr>
+                        <td>enero-2020</td>
+                        <td>{{ dinero | currency:'MXN' }}</td>
+                        <td>{{ dinero | currency:'MXN' }}</td>
+                        <td>{{ dinero | currency:'MXN' }}</td>
+                        <td>{{ dinero | currency:'MXN' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+        </div>
+    
+    </div>
+
+</div>

@@ -4,14 +4,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { IngresoComponent } from './ingreso/ingreso.component';
+import { IngresosComponent } from './ingresos/ingresos.component';
+
 
 const rutas:Routes = [
   { path: 'dashboard', 
     component: PagesComponent, 
     children: [
       { path: '', component: DashboardComponent },
-      { path: 'ingreso', component: IngresoComponent }
+      { path: 'ingresos', component: IngresosComponent }
     ] 
   }
 ];

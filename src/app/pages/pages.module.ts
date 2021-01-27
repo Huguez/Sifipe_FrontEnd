@@ -5,30 +5,34 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { ComponentesModule } from '../components/componentes.module';
 
 // Mis Componentes
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesNotFoundComponent } from './404/pages-not-found.component';
-import { IngresoComponent } from './ingreso/ingreso.component';
+import { IngresosComponent } from './ingresos/ingresos.component';
+
 
 @NgModule({
   declarations: [
     PagesComponent,
     DashboardComponent,
     PagesNotFoundComponent,
-    IngresoComponent
+    IngresosComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     AppRoutingModule,
     SharedModule,
+    ComponentesModule
   ],
   exports: [
     PagesComponent,
     DashboardComponent,
-    PagesNotFoundComponent
+    PagesNotFoundComponent,
+    IngresosComponent
   ]
 })
 export class PagesModule { }
