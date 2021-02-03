@@ -12,6 +12,9 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesNotFoundComponent } from './404/pages-not-found.component';
 import { IngresosComponent } from './ingresos/ingresos.component';
+import { GastosComponent } from './gastos/gastos.component';
+import { DeudasComponent } from './deudas/deudas.component';
+import { DeudasSaldadasComponent } from './deudas-saldadas/deudas-saldadas.component';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { IngresosComponent } from './ingresos/ingresos.component';
     PagesComponent,
     DashboardComponent,
     PagesNotFoundComponent,
-    IngresosComponent
+    IngresosComponent,
+    GastosComponent,
+    DeudasComponent,
+    DeudasSaldadasComponent
   ],
   imports: [
     CommonModule,
