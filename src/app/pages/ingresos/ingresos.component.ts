@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 
 @Component({
@@ -9,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IngresosComponent implements OnInit {
   
-  
+  public data =  [300, 500, 100];
   public dinero: number = 750.00;
-
+  public label =  [['Download', 'Sales'], ['In', 'Store', 'Sales'], 'Mail Sales'];
   constructor() { 
     
   }
