@@ -1,10 +1,23 @@
 <div style="display: block;">
-    <canvas baseChart 
-        [data]="pieChartData" 
-        [labels]="pieChartLabels" 
-        [options]="pieChartOptions"
-        [plugins]="pieChartPlugins"
+
+    <canvas  *ngIf="tipo == 'pie'" baseChart 
         [chartType]="tipo"
-        [legend]="pieChartLegend" >
+        [data]="data_g" 
+        [labels]="labels_g"
+        [options]="options"
+        [legend]="legend_g" >
+        [plugins]="plugins_g"
     </canvas>
+    
+    <canvas *ngIf="tipo == 'line'" baseChart
+        [chartType]="tipo"
+        [datasets]="data_g" 
+        [labels]="labels_g" 
+        [options]="options"
+        [legend]="legend_g" >
+        [plugins]="plugins_g"
+    </canvas>
+    
+    
 </div>
+<!-- [colors]="lineChartColors" -->
