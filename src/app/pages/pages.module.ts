@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Mis Modulos
 import { RouterModule } from '@angular/router';
@@ -32,7 +33,9 @@ import { DeudasSaldadasComponent } from './deudas-saldadas/deudas-saldadas.compo
     RouterModule,
     AppRoutingModule,
     SharedModule,
-    ComponentesModule
+    ComponentesModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     PagesComponent,
