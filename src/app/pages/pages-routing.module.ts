@@ -27,7 +27,7 @@ const rutas:Routes = [
 
 @NgModule({
   declarations: [],
-  imports: [ RouterModule.forRoot( rutas ) ],
+  imports: [ RouterModule.forRoot(rutas, { relativeLinkResolution: 'legacy' }) ],
   exports: [ RouterModule ]
 })
 export class PagesRoutingModule { }
