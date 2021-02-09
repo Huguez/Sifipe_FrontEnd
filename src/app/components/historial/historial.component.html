@@ -1,0 +1,22 @@
+<h1 class="h2">Deudas saldadas</h1>
+    <table class="table table-hover mt-4">
+        <thead>
+            <tr>
+                <th *ngFor="let columna of header" scope="col">
+                    {{columna}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of lista; let i = index"  scope="row"  (click)="prueba()">
+                <td> transporte </td>
+                <td> BBVA Bancomer </td>
+                <td> {{ i+3       | currency:'MXN':'symbol'  }}</td>
+                <td> {{ i+3+87.13 | currency:'MXN':'symbol': '2.2' }}</td>
+                <td> {{ i+3+53.33 | currency:'MXN':'symbol': '2.2' }}</td>
+                <td> {{ i+3       | percent:'2.2' }}</td>
+                <td> {{ fecha     | date:'d-MM-yyyy' }}</td>
+                <td> {{ fecha     | date:'d-MM-yyyy' }}</td>
+            </tr>
+        </tbody>
+    </table>
