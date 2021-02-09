@@ -38,9 +38,12 @@ export class GastosComponent implements OnInit {
 
   pueba(){
     let subcategoria = document.getElementById('subCategoria');
+    console.log(subcategoria);
     
-    while( 0 < subcategoria.childNodes.length ){
-      subcategoria.removeChild( subcategoria.firstChild );
+    if( subcategoria.childNodes ){
+      while( 0 < subcategoria.childNodes.length ){
+        subcategoria.removeChild( subcategoria.firstChild );
+      }
     }
     
     
