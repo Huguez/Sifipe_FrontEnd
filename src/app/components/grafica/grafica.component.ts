@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { ChartType, ChartOptions } from 'chart.js';
 import { monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip } from 'ng2-charts';
 
@@ -6,10 +6,13 @@ import { monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip } from 'ng2-charts'
 @Component({
   selector: 'app-grafica',
   templateUrl: './grafica.component.html',
-  styles: []
+  styles: [
+]
 })
-export class GraficaComponent implements OnInit {
+export class GraficaComponent implements OnInit, AfterViewInit {
   
+  @ViewChild('mycanvas') myca: ElementRef;
+
   @Input() public tipo: ChartType;
   @Input() public labels_g:any;
   @Input() public data_g:any;
@@ -19,13 +22,58 @@ export class GraficaComponent implements OnInit {
   public options: ChartOptions = {
     responsive: true,
   };
-
+  
   constructor() { 
     monkeyPatchChartJsTooltip();
     monkeyPatchChartJsLegend();
   }
+  
+  ngOnInit(): void {
+    if( this.tipo == 'doughnut' ){
+      this.data_g[1] = this.data_g[1] - this.data_g[0]
+    }
+  }
 
-  ngOnInit(): void {    
+  ngAfterViewInit(){
+    if( this.tipo == 'doughnut' ){
+    
+      let ctx = this.myca.nativeElement.getContext("2d");
+      
+      this.options = {
+          hover: {
+            animationDuration: 0, 
+        },
+        animation: { 
+          onComplete: ( ) => {
+            // this.options.animation.duration = 0;
+            if( this.tipo == 'doughnut' ){
+              this.doit(ctx);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  doit( ctx:any ) {
+    let width = this.myca.nativeElement.clientWidth;
+    let height = this.myca.nativeElement.clientHeight;
+  
+    let fontSize = (height / 180).toFixed(2);
+    ctx.font = fontSize + "em Verdana";
+    ctx.fillStyle = "dark";
+    
+    const mes = 7200; // services
+    let juntado = this.data_g[0]/mes;
+
+    let meta = this.data_g[1];
+
+    let text = ` ${ juntado } meses`,
+    textX = Math.round( ( width - ctx.measureText(text).width) / 2),
+    textY = height / 2;
+    
+    ctx.fillText(text, textX, textY);
+    ctx.restore();
   }
 
 }

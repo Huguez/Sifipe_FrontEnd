@@ -1,12 +1,12 @@
 <div style="display: block;">
 
-    <canvas  *ngIf="tipo == 'pie'" baseChart 
+    <canvas #mycanvas *ngIf="tipo == 'doughnut' || tipo == 'pie'" baseChart 
         [chartType]="tipo"
         [data]="data_g" 
         [labels]="labels_g"
         [options]="options"
         [legend]="legend_g" >
-        [plugins]="plugins_g"
+        
     </canvas>
     
     <canvas *ngIf="tipo == 'line' || tipo == 'bar' " baseChart
@@ -15,7 +15,7 @@
         [labels]="labels_g" 
         [options]="options"
         [legend]="legend_g" >
-        [plugins]="plugins_g"
+        
     </canvas>
     
     
