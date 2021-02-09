@@ -3,16 +3,25 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-deudas-saldadas',
   templateUrl: './deudas-saldadas.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class DeudasSaldadasComponent implements OnInit {
   
-  public fecha:Date = new Date();
-  public a: number = 0.259;
-  public b: number = 130;
+  public cabeza = [
+    "Tipo",
+    "Acreedor",
+    "Monto Original",
+    "Monto Final",
+    "Diferencia",
+    "Interes",
+    "Fecha de Expedicion",
+    "Fecha de Cumplimiento",
+  ];
+
+  public cuerpo = [1,2];
 
   public carga: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
