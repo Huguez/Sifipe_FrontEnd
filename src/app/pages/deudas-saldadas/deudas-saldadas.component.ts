@@ -7,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class DeudasSaldadasComponent implements OnInit {
+  
+  public fecha:Date = new Date();
+  public a: number = 0.259;
+  public b: number = 130;
 
+  public carga: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+    this.carga = true;
   }
 
+  prueba(){
+    console.log("esto es una prueba");
+  }
 }
