@@ -13,6 +13,6 @@ import { LoadingComponent } from './loading/loading.component';
     CommonModule,
     ChartsModule
   ],
-  exports: [ GraficaComponent, HistorialComponent ]
+  exports: [ GraficaComponent, HistorialComponent, LoadingComponent ]
 })
 export class ComponentesModule { }
