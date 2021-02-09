@@ -1,8 +1,10 @@
 <div class="row">
     
-    <app-historial *ngIf="!carga" [header]="cabeza" [lista]="cuerpo" ></app-historial>
+    <h1 class="h2">Deudas saldadas</h1>
+
+    <app-historial *ngIf="carga" [header]="cabeza" [lista]="cuerpo" ></app-historial>
     
     <app-loading *ngIf="carga" mensaje="Preparando las deudas saldadas"></app-loading>
-    
+
 </div>
 
