@@ -8,6 +8,7 @@ import { IngresosComponent } from './ingresos/ingresos.component';
 import { GastosComponent } from './gastos/gastos.component';
 import { DeudasComponent } from './deudas/deudas.component';
 import { DeudasSaldadasComponent } from './deudas-saldadas/deudas-saldadas.component';
+import { EmergenciaComponent } from './emergencia/emergencia.component';
 
 
 const rutas:Routes = [
@@ -18,7 +19,8 @@ const rutas:Routes = [
       { path: 'ingresos', component: IngresosComponent },
       { path: 'gastos', component: GastosComponent },
       { path: 'deudas', component: DeudasComponent },
-      { path: 'deudasSaldadas', component: DeudasSaldadasComponent}
+      { path: 'deudasSaldadas', component: DeudasSaldadasComponent },
+      { path: 'emergencia', component: EmergenciaComponent },
       
     ] 
   }

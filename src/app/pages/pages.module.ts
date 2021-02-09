@@ -16,6 +16,8 @@ import { IngresosComponent } from './ingresos/ingresos.component';
 import { GastosComponent } from './gastos/gastos.component';
 import { DeudasComponent } from './deudas/deudas.component';
 import { DeudasSaldadasComponent } from './deudas-saldadas/deudas-saldadas.component';
+import { EmergenciaComponent } from './emergencia/emergencia.component';
+import { RetiroComponent } from './retiro/retiro.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { DeudasSaldadasComponent } from './deudas-saldadas/deudas-saldadas.compo
     IngresosComponent,
     GastosComponent,
     DeudasComponent,
-    DeudasSaldadasComponent
+    DeudasSaldadasComponent,
+    EmergenciaComponent,
+    RetiroComponent
   ],
   imports: [
     CommonModule,
