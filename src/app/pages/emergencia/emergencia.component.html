@@ -1,5 +1,73 @@
+<div class="row mb-4">
+    <form (ngSubmit)="prueba2()" [formGroup]="FM"  class="mb-3 row">
+            
+        <div class="col-auto" >    
+            <label class="form-check-label">
+                Meta actual {{ datos[1] | currency:'MXN' }}
+            </label>
+        </div>
+    
+        <div class="col-auto " >
+            <label class="form-check-label">
+                Ingreso  Mensual Promedio {{ datos[0] | currency:'MXN' }}
+            </label>
+        </div>
+        
+        <div class="col">
+            
+            <select formControlName="meses" class="form-select">
+                <option value="0">Nueva Meta</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        
+        </div>
+        
+        <div class="col d-grid gap-2">
+            <button [disabled]="FM.value.meses === 0 " class="btn btn-success" type="submit">
+                Modificar Meta
+            </button>
+        </div>
+
+    </form>
+
+</div>
+
 <div class="row">
+    
+    <div class="col">
+        <app-grafica tipo="doughnut"  [data_g]="datos" [labels_g]="etiqueta" ></app-grafica>
+    </div>
 
-    <app-grafica tipo="doughnut"  [data_g]="datos" [labels_g]="etiqueta" ></app-grafica>
+    <div class="col-4">
+        
+        <form (ngSubmit)="prueba()" [formGroup]="FAE" >
+            
+            <div class="input-group mt-3 mb-3">
+                <input formControlName="monto" step="0.01" type="number" class="form-control" id="inputNumber" placeholder="Monto">
+            </div>
+            
+            <div class="form-check mt-3">
+                <input formControlName="opcion" class="form-check-input" type="radio" id="flexRadioRetiro" value="retirar">
+                <label class="form-check-label" for="flexRadioRetiro">
+                  Retirar
+                </label>
+            </div>
 
+            <div class="form-check mt-3">
+                <input formControlName="opcion" class="form-check-input" type="radio" id="flexRadioAhorrar" value="ahorrar">
+                <label class="form-check-label" for="flexRadioAhorrar">
+                  Ahorrar
+                </label>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button [disabled]="FAE.invalid" class="btn btn btn-primary mt-3" type="submit">
+                    Cargar Monto
+                </button>
+            </div>
+
+        </form>
+    </div>
 </div>

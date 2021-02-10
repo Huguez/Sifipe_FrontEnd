@@ -68,9 +68,9 @@ export class GraficaComponent implements OnInit, AfterViewInit {
 
     let meta = this.data_g[1];
 
-    let text = ` ${ juntado } meses`,
+    let text = ` ${ juntado } ${ juntado === 1 ? 'mes' : 'meses' }`,
     textX = Math.round( ( width - ctx.measureText(text).width) / 2),
-    textY = height / 2;
+    textY = height / 1.9;
     
     ctx.fillText(text, textX, textY);
     ctx.restore();
