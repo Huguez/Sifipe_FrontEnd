@@ -19,6 +19,8 @@ export class GraficaComponent implements OnInit, AfterViewInit {
   @Input() public legend_g:boolean;
   @Input() public plugins_g: [];
   
+  public metaRest: number = 0;
+
   public options: ChartOptions = {
     responsive: true,
   };
@@ -29,14 +31,12 @@ export class GraficaComponent implements OnInit, AfterViewInit {
   }
   
   ngOnInit(): void {
-    if( this.tipo == 'doughnut' ){
-      this.data_g[1] = this.data_g[1] - this.data_g[0]
-    }
+    console.log("g");
   }
 
   ngAfterViewInit(){
     if( this.tipo == 'doughnut' ){
-    
+      
       let ctx = this.myca.nativeElement.getContext("2d");
       
       this.options = {
@@ -45,10 +45,7 @@ export class GraficaComponent implements OnInit, AfterViewInit {
         },
         animation: { 
           onComplete: ( ) => {
-            // this.options.animation.duration = 0;
-            if( this.tipo == 'doughnut' ){
-              this.doit(ctx);
-            }
+            this.doit(ctx);
           }
         }
       }
@@ -65,8 +62,6 @@ export class GraficaComponent implements OnInit, AfterViewInit {
     
     const mes = 7200; // services
     let juntado = this.data_g[0]/mes;
-
-    let meta = this.data_g[1];
 
     let text = ` ${ juntado } ${ juntado === 1 ? 'mes' : 'meses' }`,
     textX = Math.round( ( width - ctx.measureText(text).width) / 2),

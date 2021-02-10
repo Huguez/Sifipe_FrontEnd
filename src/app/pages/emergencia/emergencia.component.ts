@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -10,17 +10,22 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class EmergenciaComponent implements OnInit {
   
   public etiqueta = ['Acumulado', 'Meta Restante'];
-  public datos = [];
+  public datos = [7200, 21600];
+  
+  public meta: number;
+  public juntado: number;
 
   public FAE: FormGroup;
   public FM: FormGroup;
 
-  constructor( private _fb: FormBuilder ) { }
+  constructor( private _fb: FormBuilder ) { 
+    this.meta = this.datos[1];
+    this.juntado =  this.datos[0];
+  }
 
   ngOnInit(): void {
-    this.datos[0] = 7200;
-    this.datos[1] = 21600;
-
+    console.log("e");
+        
     this.FAE = this._fb.group({
       monto: [ null, [ Validators.required, Validators.min(1) ] ],
       opcion: [ null, [ Validators.required ] ]
@@ -29,7 +34,7 @@ export class EmergenciaComponent implements OnInit {
     this.FM = this._fb.group({
       meses: [ 0, Validators.required ]
     });
-
+    this.datos[1] = this.datos[1] - this.datos[0];
   }
   
   prueba(){
