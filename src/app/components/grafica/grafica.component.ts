@@ -31,7 +31,6 @@ export class GraficaComponent implements OnInit, AfterViewInit {
   }
   
   ngOnInit(): void {
-    console.log("g");
   }
 
   ngAfterViewInit(){
