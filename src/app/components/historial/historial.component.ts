@@ -9,10 +9,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HistorialComponent implements OnInit {
 
   @Input() public header:[];
-  @Input() public lista:[];
+  @Input() public body:[];
   
   public fecha:Date = new Date();
-  
 
   constructor() { }
 
@@ -22,5 +21,18 @@ export class HistorialComponent implements OnInit {
   prueba(){
     console.log("esto es una prueba");
   }
-
+  
+  getTipo( item ){
+    if( typeof item == 'string' ){
+      
+      let fecha = Date.parse( item ); // NaN si no es fecha, numero si es fecha
+      
+      if( !isNaN( new Date( fecha ).getTime() ) ) {
+        return 'fecha';
+      }else{
+        return 'string';
+      }
+    }
+    return typeof item;
+  }
 }

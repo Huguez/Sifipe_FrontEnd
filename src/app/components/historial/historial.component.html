@@ -2,21 +2,22 @@
 <table class="table table-hover mt-4">
     <thead>
         <tr>
-            <th *ngFor="let columna of header" scope="col">
+            <th *ngFor="let columna of header" scope="col" class="text-center">
                 {{columna}}
             </th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let item of lista; let i = index"  scope="row"  (click)="prueba()">
-            <td> transporte </td>
-            <td> BBVA Bancomer </td>
-            <td> {{ i+3       | currency:'MXN':'symbol'  }}</td>
-            <td> {{ i+3+87.13 | currency:'MXN':'symbol': '2.2' }}</td>
-            <td> {{ i+3+53.33 | currency:'MXN':'symbol': '2.2' }}</td>
-            <td> {{ i+3       | percent:'2.2' }}</td>
-            <td> {{ fecha     | date:'d-MM-yyyy' }}</td>
-            <td> {{ fecha     | date:'d-MM-yyyy' }}</td>
+        <tr *ngFor="let row of body"  scope="row"  (click)="prueba()">
+            <td *ngFor="let item of row" class="text-center">
+                <span *ngIf="getTipo( item ) === 'number'"> {{ item  | currency:'MX' }} </span>
+                <span *ngIf="getTipo( item ) === 'fecha'">  {{ item  | date:'MMMM-yyyy' }} </span>
+                <span *ngIf="getTipo( item ) === 'string'"> {{ item }} </span>
+            </td>
         </tr>
     </tbody>
 </table>
+
+<!-- <td> {{ i+3       | percent:'2.2' }}</td> -->
+<!-- <td> {{ fecha     | date:'d-MM-yyyy' }}</td> -->
+<!-- <td> {{ i+3+87.13 | currency:'MXN':'symbol': '2.2' }}</td> -->
