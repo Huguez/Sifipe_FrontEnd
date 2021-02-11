@@ -2,10 +2,9 @@
     
     <h1 class="h2">Deudas saldadas</h1>
 
-    <app-historial *ngIf="carga" [header]="cabeza" [lista]="cuerpo" ></app-historial>
-    
-    
+    <app-historial *ngIf="carga" [header]="cabeza" [body]="cuerpo" ></app-historial>
+
 </div>
 
 
-<app-loading *ngIf="carga" mensaje="de las deudas saldadas"></app-loading>
+<app-loading *ngIf="!carga" mensaje="de las deudas saldadas"></app-loading>

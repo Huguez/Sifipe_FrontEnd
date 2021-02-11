@@ -15,14 +15,27 @@ export class GastosComponent implements OnInit {
   // , 
   public label = ['Vivienda', 'Comida', 'Transporte', 'Impuestos & Donaciones', 'Seguros', 'Ahorros', 'Salud', 'Servicios', 'Recreacion', 'Vestimenta', 'Deudas', 'Personal' ];
   
+  public cabecera = [];
+  public cuerpo = [];
+
   public dinero = 100;
 
   public subcategoriaAux = [ 'Hipoteca Uno/Renta', 'Hipoteca Dos', 'Impuestos de vivienda', 'Reparaciones/Mantenimiento', 'Gastos de administración' ];
 
-  constructor( private _fb:FormBuilder ) { }
+  constructor( private _fb:FormBuilder ) {
+    this.cabecera.push( 'periodo' );
+
+    this.label.forEach( col => {
+      this.cabecera.push( col );
+    });
+    
+    this.cabecera.push( 'total' );
+    
+    this.cuerpo.push( ['enero-2020', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 100 ] );
+  }
 
   ngOnInit(): void {
-
+    
     this.gastoForm = this._fb.group({
       categoria: [ "", [ Validators.required ] ],
       subCategoria: [ "", [ Validators.required ] ], // 

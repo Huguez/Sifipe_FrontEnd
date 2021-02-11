@@ -1,4 +1,4 @@
-<div class="container">
+<div class="row">
 
     <div class="row text-center m-2">
         <div class="col-auto me-auto">
@@ -86,43 +86,60 @@
         </div>
         
     </div>
-    
-    <div class="row mt-4">
-        
-        <div class="col">
+
+        <!-- filtrar historial -->
+    <div class="row mt-5">
+
+        <form class="row gx-3 gy-2 justify-content-md-center">
             
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Periodo</th>
-                        <th scope="col"> I1 </th>
-                        <th scope="col"> I2 </th>
-                        <th scope="col"> I3 </th>
-                        <th scope="col"> Total </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>enero-2020</td>
-                        <td>{{ dinero | currency:'MXN' }}</td>
-                        <td>{{ dinero | currency:'MXN' }}</td>
-                        <td>{{ dinero | currency:'MXN' }}</td>
-                        <td>{{ dinero | currency:'MXN' }}</td>
-                    </tr>
-                    <tr>
-                        <td>enero-2020</td>
-                        <td>{{ dinero | currency:'MXN' }}</td>
-                        <td>{{ dinero | currency:'MXN' }}</td>
-                        <td>{{ dinero | currency:'MXN' }}</td>
-                        <td>{{ dinero | currency:'MXN' }}</td>
-                    </tr>
-                </tbody>
-            </table>
-    
-        </div>
-    
+            <div class="col-sm-3">
+                <select class="form-select">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+
+            </div>
+
+            <div class="col-sm-3">
+                <select class="form-select">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+
+            </div>
+            
+            <div class="col-sm-3">
+              
+              <select class="form-select">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+
+            </div>
+
+            <div class="col-auto">
+              <button type="submit" class="btn btn-outline-primary">Aplicar</button>
+            </div>
+
+
+            <div class="col-auto">
+                <button type="submit" class="btn btn-outline-secondary">Eliminar Filtros</button>
+              </div>
+
+        </form>
+
     </div>
 
+
 </div>
+        
+<app-historial [header]="cabecera" [body]="cuerpo" ></app-historial>
+
 
 <app-loading mensaje="de las fuentes de ingreso" ></app-loading>

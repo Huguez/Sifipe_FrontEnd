@@ -18,7 +18,7 @@ export class DeudasSaldadasComponent implements OnInit {
     "Fecha de Cumplimiento",
   ];
 
-  public cuerpo = [1,2];
+  public cuerpo = [["wawa","wawa", 100,100,100,100,'enero-2020','enero-2020']];
 
   public carga: boolean = false;
 

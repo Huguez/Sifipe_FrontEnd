@@ -4,8 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-deudas',
   templateUrl: './deudas.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class DeudasComponent implements OnInit {
   
@@ -20,12 +19,17 @@ export class DeudasComponent implements OnInit {
   public label = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   public dinero = 100;
 
-  constructor( private _fb:FormBuilder ) { }
+  public cabecera =[ "Periodo", "D1", "D2", "D3", "Abonado" ];
+  public cuerpo =[ ["enero-2020", 100,100,100,100 ]];
+
+  constructor( private _fb:FormBuilder ) {
+
+  }
 
   ngOnInit(): void {
     this.abonarForm = this._fb.group({
       nombreDeuda: [ "", [ Validators.required ]],
-      monto: [null, [ Validators.required ]]
+      monto: [ null, [ Validators.required ]]
     })
   }
 
