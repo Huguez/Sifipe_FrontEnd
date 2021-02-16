@@ -10,6 +10,7 @@ import { DeudasComponent } from './deudas/deudas.component';
 import { DeudasSaldadasComponent } from './deudas-saldadas/deudas-saldadas.component';
 import { EmergenciaComponent } from './emergencia/emergencia.component';
 import { RetiroComponent } from './retiro/retiro.component';
+import { InversionesComponent } from './inversiones/inversiones.component';
 
 
 const rutas:Routes = [
@@ -23,6 +24,8 @@ const rutas:Routes = [
       { path: 'deudasSaldadas', component: DeudasSaldadasComponent },
       { path: 'emergencia', component: EmergenciaComponent },
       { path: 'retiro', component: RetiroComponent },
+      { path: 'inversiones', component: InversionesComponent },
+      
 
     ] 
   }

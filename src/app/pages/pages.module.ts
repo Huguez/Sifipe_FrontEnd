@@ -18,6 +18,7 @@ import { DeudasComponent } from './deudas/deudas.component';
 import { DeudasSaldadasComponent } from './deudas-saldadas/deudas-saldadas.component';
 import { EmergenciaComponent } from './emergencia/emergencia.component';
 import { RetiroComponent } from './retiro/retiro.component';
+import { InversionesComponent } from './inversiones/inversiones.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { RetiroComponent } from './retiro/retiro.component';
     DeudasComponent,
     DeudasSaldadasComponent,
     EmergenciaComponent,
-    RetiroComponent
+    RetiroComponent,
+    InversionesComponent
   ],
   imports: [
     CommonModule,
@@ -45,7 +47,6 @@ import { RetiroComponent } from './retiro/retiro.component';
     PagesComponent,
     DashboardComponent,
     PagesNotFoundComponent,
-    IngresosComponent
   ]
 })
 export class PagesModule { }
