@@ -1,4 +1,12 @@
 
-.header-lvl-1{
-    z-index: 1;
+.img-header-profile{
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.altura{
+    height: 57px;
 }

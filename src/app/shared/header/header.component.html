@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark header-lvl-1">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
     <div class="container-fluid">
 
         <a class="navbar-brand">
@@ -16,18 +16,56 @@
         </button>    
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="navbar-nav me-auto altura">
                 <!-- <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/dashboard']" >Link 1</a>
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" >Link 2</a>
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li> -->
-            </ul>
-            <form class="d-flex ">
-                <input class="form-control form-control-dark text-dark bg-secondary w-100" type="text" placeholder="Search" aria-label="Search">
-                <!-- <button class=" ml-3 btn btn-outline-success" type="submit">Search</button> -->
+            </div>
+
+            <form class="d-flex">
+
+                <!-- Example single danger button -->
+                <div class="btn-group">
+                    
+                    <img src="https://lh3.googleusercontent.com/a-/AOh14Gjfe2_F_0WHnTl64A7c7kirK3Q5fTrmZDY8d0qNRA=s96-c" class="img-header-profile" data-bs-toggle="dropdown" aria-expanded="false" />
+                    <!-- 
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+
+                    </div>
+                    -->
+                    
+                    <ul class="dropdown-menu dropdown-menu-end mt-3">
+                        <li class="dropdown-item">la imagen,  el nickname y el correo</li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item fw-light fs-5" href="#">Perfil</a></li>
+                        <li><a class="dropdown-item" href="#">algo del presupuesto</a></li>
+                        <li><a class="dropdown-item" href="#">algo de las divisas(si se puede)</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item">Configuracion</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" >  Logout </a></li>
+                    </ul>
+                </div>
+
             </form>
+
         </div>
 
     </div>  
