@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+<nav class="navbar navbar-expand-lg shadow-sm bg-white rounded">
     <div class="container-fluid">
 
         <a class="navbar-brand">
-            <button class="btn btn-secondary" type="button" (click)="abrirMenu()">
-                <i class="bi bi-justify"></i>
+            <button class="btn btn-secondary" type="button"  (click)="abrirMenu()" >
+                <i class="bi bi-justify" ></i>
             </button>
-            <span style="cursor: pointer;" [routerLink]="['/dashboard']" class="m-3"> SiFiPe </span>
+            <span style="cursor: pointer; color: darkslategrey;" class="fs-5" [routerLink]="['/dashboard']" class="m-3"> SiFiPe </span>
         </a>
 
         <button class="navbar-toggler" type="button" 
@@ -41,26 +41,42 @@
 
             <form class="d-flex">
 
-                <!-- Example single danger button -->
                 <div class="btn-group">
                     
                     <img src="https://lh3.googleusercontent.com/a-/AOh14Gjfe2_F_0WHnTl64A7c7kirK3Q5fTrmZDY8d0qNRA=s96-c" class="img-header-profile" data-bs-toggle="dropdown" aria-expanded="false" />
-                    <!-- 
-                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
-
-                    </div>
-                    -->
                     
                     <ul class="dropdown-menu dropdown-menu-end mt-3">
-                        <li class="dropdown-item">la imagen,  el nickname y el correo</li>
+                        <li class="dropdown-item" >
+                          
+                          <div class="row" >
+                            
+                            <div class="col-5 me-0 ms-0" >
+                              <img src="https://lh3.googleusercontent.com/a-/AOh14Gjfe2_F_0WHnTl64A7c7kirK3Q5fTrmZDY8d0qNRA=s96-c" class="img-header" />
+                            </div>
+
+                            <div class="col" >
+                              <p class="h5 mt-2" >Huguez</p>
+
+                              <p class="text-muted text-truncate" style="font-size: 11px; max-width: 128px;"> carlos.huguez@gmail.com</p>
+                            </div>
+                          </div>
+                        
+                        </li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item fw-light fs-5" href="#">Perfil</a></li>
-                        <li><a class="dropdown-item" href="#">algo del presupuesto</a></li>
-                        <li><a class="dropdown-item" href="#">algo de las divisas(si se puede)</a></li>
+                        
+                        <li><a class="dropdown-item fs-5" > <i class="bi bi-person  me-2"></i>	Perfil</a></li>
+                        <li><a class="dropdown-item fs-5" ><i class="bi bi-file-earmark-bar-graph me-2"></i> Esquema Presupuestal</a></li>
+                        <li><a class="dropdown-item fs-5" > 
+                          <i class="bi bi-wallet  me-2"></i> Esquema de Inversion</a></li>
+                        <li><a class="dropdown-item fs-5" > <i class="bi bi-cash-stack  me-2"></i> divisas</a></li>
+                        
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item">Configuracion</a></li>
+
+                        <li><a class="dropdown-item fs-5"> <i class="bi bi-gear  me-2"></i> Configuracion</a></li>
+                        
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" >  Logout </a></li>
+                        
+                        <li><a class="dropdown-item fs-5" > <i class="bi bi-power  me-2"></i> Logout </a></li>
                     </ul>
                 </div>
 
