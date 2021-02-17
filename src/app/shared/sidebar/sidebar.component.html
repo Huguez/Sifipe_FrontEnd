@@ -1,21 +1,29 @@
 <!-- animate__slideInLeft -->
 
-<div class="sidebar overflow-auto bg-white rounded" *ngIf="showMenu">
+<div class="sidebar overflow-auto bg-dark" *ngIf="showMenu">
   
     
-  <div class=" accordion accordion-flush" id="accordionFlushExample">
+  <div class=" accordion " >
 
     <!-- primer  -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingOne">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-        data-bs-target="#flush-collapsePresupuesto" aria-expanded="false" 
-        aria-controls="flush-collapseOne">
+    <div class="accordion-itemx">
+<!--       
+      data-toggle="collapse" 
+      data-target="#collapseOne" 
+      aria-expanded="true" 
+      aria-controls="collapseOne" -->
+
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" 
+        data-bs-target="#flush-collapsePresupuesto" >
           Presupuesto
         </button>
-      </h2>
-      <div id="flush-collapsePresupuesto" class="accordion-collapse collapse" 
-      aria-labelledby="flush-headingOne" >
+<!--         
+        id="collapseOne" 
+        class="collapse show" 
+        aria-labelledby="headingOne" 
+        data-parent="#accordionExample"
+         -->
+      <div id="flush-collapsePresupuesto" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" >
         <div class="accordion-body">
 
           <!-- routerLinkActive="active" -->

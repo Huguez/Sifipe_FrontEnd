@@ -1,7 +1,7 @@
 .sidebar{
     position: absolute;
     left: 0;
-    width: 22%;
+    width: 19%;
     height: 90%;
     max-height: 90%;
     /* -webkit-animation: slide 0.5s forwards; */
@@ -17,4 +17,9 @@ a {
     display: block;
     padding: 8px 24px;
     text-align: left; 
+    color: floralwhite;
+}
+
+.accordion-button{
+    color: floralwhite;
 }
