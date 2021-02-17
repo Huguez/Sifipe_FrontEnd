@@ -16,6 +16,9 @@ export class PagesComponent implements OnInit {
   
   revisarMenu( event ){
     this.abrirMenu = event;
+    
+    document.getElementById("contenedor").style.marginLeft = this.abrirMenu ? "300px" :" 10px" ;
+    
   }
 
 }

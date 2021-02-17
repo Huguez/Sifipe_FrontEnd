@@ -1,12 +1,13 @@
 <!-- animate__slideInLeft -->
 
-<div class="sidebar overflow-auto bg-dark" *ngIf="showMenu">
+<!--[ngClass]="{ 'width: 19%': !showMenu, 'width: 0%': showMenu }" -->
+<div id="sidebar" class="sidebar overflow-auto bg-dark mt-2"   *ngIf="showMenu" >
   
     
   <div class=" accordion " >
 
     <!-- primer  -->
-    <div class="accordion-itemx">
+    <div class="accordion-item">
 <!--       
       data-toggle="collapse" 
       data-target="#collapseOne" 

@@ -2,15 +2,16 @@
 
     <app-header [isMenuOpen]="abrirMenu" (salidaMenu)="revisarMenu($event)" ></app-header>
     
-    <app-sidebar [showMenu]="abrirMenu"  ></app-sidebar>
+    <app-sidebar [showMenu]="abrirMenu" ></app-sidebar>
     
-    <div class="mt-5">
+    <div  id="contenedor">
         
-        <div class="container-fluid">
+        <div class="container-fluid pt-5" >
             
             <!-- breadcrumbs -->
             
             <router-outlet></router-outlet>
+
         </div>
         
         <!-- footer -->

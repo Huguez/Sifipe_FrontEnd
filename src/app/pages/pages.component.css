@@ -2,6 +2,11 @@
     background-color: #f9f9f9;
 }
 
-header{
+#contenedor{
+    margin-top: 65px;
+    transition: margin-left 0.5s;
+}
 
+#sidebar{
+    transition: margin-right 0.5s;
 }

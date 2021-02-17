@@ -12,6 +12,7 @@ export class SidebarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // document.getElementById("sidebar").style.width = "19%";
   }
   
 }
